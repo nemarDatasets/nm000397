@@ -1,5 +1,5 @@
-participant_id	source_id	age	sex	handedness	n_amplifier_channels	tasks
-sub-A	Participant A	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined
-sub-B	Participant B	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined
-sub-C	Participant C	n/a	M	n/a	80	pinchexecuted,powerexecuted
-sub-D	Participant D	n/a	M	n/a	128	pinchexecuted,powerexecuted
+participant_id	source_id	age	sex	handedness	n_amplifier_channels	tasks	diagnosis	implant_type	n_contacts_analysed_paper	regions_sampled
+sub-A	Participant A	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined	pharmacologically resistant epilepsy	SEEG	36	motor cortex (central sulcus wall); premotor; anterior and posterior insula
+sub-B	Participant B	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined	pharmacologically resistant epilepsy	SEEG	36	motor cortex (central sulcus wall); premotor; anterior and posterior insula
+sub-C	Participant C	n/a	M	n/a	80	pinchexecuted,powerexecuted	pharmacologically resistant epilepsy	SEEG	32	motor cortex (precentral/central sulcus); premotor; primary sensory cortex; insula
+sub-D	Participant D	n/a	M	n/a	128	pinchexecuted,powerexecuted	pharmacologically resistant epilepsy	SEEG	60	precentral gyrus (arm/hand and leg areas); SMA; primary sensory cortex (arm/hand and leg); no insula

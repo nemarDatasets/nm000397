@@ -43,3 +43,54 @@ also performed blocks in which they only imagined producing the force. Each bloc
   ('Created on ...') of the SLCData files are reduced to month and year. No names or hospital identifiers were found
   in headers, file names or SLCdata fields.
 - Age is given in the article only as a range (29-49 years); all participants were male.
+
+## Additional metadata and localisation (added 2026-10-08)
+
+Compiled after the upload from the article, its supplement and the source deposit (each statement names its source). Text and sidecar metadata only; no data file was changed.
+
+Sources: P = Murphy, Miller, Gunalan, Ajiboye 2016, PLoS ONE 11(3):e0150359, doi:10.1371/journal.pone.0150359 (PMC4786254), with S1 Text (supplemental methods), S2 Text and S1 Fig. R = deposit READMEs (README_for_Participant*.txt, identical). F = deposit files (.ns3 headers, probe on Voyager).
+
+**Reference.** Hardware reference was a depth-electrode contact in another anatomical region not involved in seizure generation. For analysis, signals were common-average referenced within groups of contacts on the same electrode passing through similar tissue, excluding noisy channels (P). The SLCdata CARchans field lists 1..128 (F).
+
+**Electrodes.** Integra electrodes have 12 Pt-Ir contacts (1.1 mm diameter, 2.3 mm long, 5 mm spacing). One participant had two PMT combination electrodes with 4 macro contacts (1.4 mm, 7 mm centre spacing) and 4x6 microwires. Only electrodes passing through sensorimotor areas were used in the study (P).
+
+**Localisation.** The post-operative CT (Philips Brilliance iCT or Siemens SOMATOM Sensation 16/Cardiac 64) was rigidly coregistered to the pre-operative 3T T1 (Siemens MAGNETOM Verio) with FSL FLIRT (mutual information, 6 DOF) (S1 Text). Each contact was shown as a sphere and coloured by the nearest structure from a FreeSurfer parcellation (motor, premotor, primary sensory, insula); SMA was drawn by hand in FSLView. Code: https://github.com/mcintyrelab (P). Per participant (P Results/Discussion): every participant had an electrode through the arm/hand area of motor cortex. A, B and C had motor electrodes near the central sulcus; D had two electrodes on the precentral gyrus (arm/hand and leg areas) and one through the SMA. A, B and C had contacts in anterior and posterior insula, D had none. C and D had contacts in primary sensory cortex; the contacts of A and B were too deep to record from sensory cortex. S1 Fig colour-codes every contact of every analysed electrode by region (counted in the table below). The mapping from deposit channel numbers (chanN) to these contacts and the coordinates are not published.
+
+### Regions per participant (as published; no coordinates exist)
+
+| participant | region (as stated) | hemisphere | contacts | source |
+|---|---|---|---|---|
+| ParticipantA | AI (anterior insula electrode): premotor cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | AI (anterior insula electrode): insular cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | AI (anterior insula electrode): uncoloured: not grey matter (white matter or outside brain) | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): motor cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): insular cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | PI (posterior insula electrode): insular cortex | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | PI (posterior insula electrode): uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: premotor cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: insular cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: uncoloured | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: motor cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: insular cortex | n/a | 2 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: uncoloured | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | PI: insular cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | PI: uncoloured | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: premotor cortex | n/a | 2 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: insular cortex | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PS (precentral-sulcus side of primary motor): motor cortex | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | CS (central-sulcus side of primary motor): motor cortex | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: primary sensory cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: insular cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: uncoloured | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SMA: supplementary motor area | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SMA: uncoloured | n/a | 9 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | ML (primary motor, leg area): motor cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | ML (primary motor, leg area): uncoloured | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | MA/H (primary motor, arm/hand area): motor cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | MA/H (primary motor, arm/hand area): uncoloured | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SL (sensory cortex, leg area): primary sensory cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SL (sensory cortex, leg area): uncoloured | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SA/H (sensory cortex, arm/hand area): primary sensory cortex | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SA/H (sensory cortex, arm/hand area): uncoloured | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |

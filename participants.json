@@ -20,5 +20,17 @@
   },
   "tasks": {
     "Description": "Tasks recorded for this participant"
+  },
+  "diagnosis": {
+    "Description": "Paper Methods: SEEG 'placed for clinical localization of seizures in patients with pharmacologically resistant epilepsy'; patients at University Hospitals Case Medical Center admitted for epilepsy monitoring prior to resection surgery."
+  },
+  "implant_type": {
+    "Description": "SEEG depth electrodes: Integra (12 Pt-Ir macro-contacts, 1.1 mm diameter, 2.3 mm length, 5 mm spacing) or, in one participant (not identified), two PMT combination electrodes (4 macro contacts 1.4 mm with 7 mm spacing plus 4x6 microwires) (paper Methods)."
+  },
+  "n_contacts_analysed_paper": {
+    "Description": "Channels analysed in the paper = number of features / 7 (paper Methods: '252 features for participants A and B, 224 features for participant C and 420 features for participant D', 7 features per channel) -> 36, 36, 32, 60. Only electrodes passing through sensorimotor areas were used. S1 Fig shows 36, 36, 30, 60 contact squares. The deposit .ns3 files carry 128 (A, B, D) or 80 (C, chan49-chan128) amplifier channels; the mapping from chanN to these contacts is not published."
+  },
+  "regions_sampled": {
+    "Description": "Paper Results 'Localization of Electrode Contacts' and Discussion (per-participant statements); contact counts per region in the README table (from S1 Fig)."
   }
 }

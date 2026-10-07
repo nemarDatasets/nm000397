@@ -1,0 +1,24 @@
+{
+  "source_id": {
+    "Description": "Participant letter used in the Dryad release and in the article"
+  },
+  "age": {
+    "Description": "Not given per participant; the article reports ages 29-49 years for the 4 participants",
+    "Units": "year"
+  },
+  "sex": {
+    "Description": "Sex; the article states all four participants were male",
+    "Levels": {
+      "M": "male"
+    }
+  },
+  "handedness": {
+    "Description": "not given in the release or article"
+  },
+  "n_amplifier_channels": {
+    "Description": "Number of amplifier inputs in the NSx files (chan1..chan128, or chan49..chan128 for participant C); not all inputs are confirmed SEEG contacts"
+  },
+  "tasks": {
+    "Description": "Tasks recorded for this participant"
+  }
+}

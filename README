@@ -1,0 +1,45 @@
+# Executed and imagined grasp forces recorded with stereo-EEG (Murphy et al., 2016)
+
+Stereo-EEG from four adults with drug-resistant epilepsy (University Hospitals Case Medical Center, Cleveland, OH) who
+performed force-matching tasks with a power grasp (dynamometer) and a lateral pinch (pinch gauge). Participants A and B
+also performed blocks in which they only imagined producing the force. Each block: 5 trials at each of 3 force targets
+(20, 30, 40% of maximum voluntary contraction), target shown 5 s with 5 s rest (article).
+
+## Source
+- Dryad: Murphy BA, Miller JP, Gunalan K, Ajiboye AB. Data from: Contributions of subsurface cortical modulations to
+  discrimination of executed and imagined grasp forces through stereoelectroencephalography. doi:10.5061/dryad.nq4fs
+  (version 1, 2016-04-21). License: CC0 1.0 (Dryad).
+- Article: PLoS One 11(3):e0150359 (2016), doi:10.1371/journal.pone.0150359 (open access, PMC4786254).
+- All 14 Dryad files were downloaded through the Dryad API and matched the Dryad md5 digests and sizes.
+
+## Contents
+- `sub-<A-D>/ieeg/*_task-<power|pinch><executed|imagined>_run-<block>_ieeg.*`: 46 blocks, 2.11 h in total, 2000 Hz.
+  Channels `chan1`..`chan128` (participant C: `chan49`..`chan128`) are the Neuroport amplifier inputs, typed SEEG;
+  the release does not say which inputs carried connected contacts, and gives no contact names, locations or
+  anatomical labels (the article localised contacts with CT/MRI; those data are not released). `dynamometer` is the
+  analog force signal (MISC, mV).
+- `*_events.tsv`: force-target periods from the Simulink log (SLCdata). Target values are the game's raw dynamometer
+  units. Timing = SLCdata.NSPtime minus the NSx packet start; checked by correlating the SLCdata dynamometer log with
+  the NSx dynamometer channel at those times: executed blocks r = 0.44-0.93 (median
+  0.83); imagined blocks r = -0.40-0.25 (no force produced, as expected).
+  Logged target values: each block starts with one period at a lower value (e.g. 3475), then a value of 3660
+  alternates with the force targets (e.g. 4500, 5300, 6000); 3660 is most likely the rest/baseline target, but the
+  release does not document the coding, so values are given as logged.
+- `sourcedata/dryad-nq4fs-deidentified/`: every file of the 7 zips (NSx .ns3 and SLCData .mat) and the README files,
+  de-identified as described below. `DEIDENTIFICATION_MANIFEST.tsv` lists original and new sha-256 per file.
+
+## Conversion
+- The int16 samples of each NSx file are written unchanged as BrainVision INT_16 (multiplexed); per-channel resolution
+  from the NSx extended header ((max analog - min analog)/(max digital - min digital): 0.25 µV/bit for the amplifier
+  inputs, 0.1526 mV/bit for the dynamometer). No filtering, resampling, re-referencing or channel removal. Read-back
+  with MNE matches the source values. NSx data packets per file: [1]; packet gaps: 0.
+- Hardware filter settings are copied from the NSx extended header into `HardwareFilters`.
+- Hardware reference: a depth contact in a region not related to seizure generation (article). The article's common
+  average re-referencing was an analysis step and is not applied here.
+
+## Privacy
+- NSx headers store the recording date and time. In the BIDS `scans.tsv` and in the sourcedata copies the day is set
+  to 01 (year, month and time of day kept); the NSx weekday field is recomputed for the 1st. MAT-file text headers
+  ('Created on ...') of the SLCData files are reduced to month and year. No names or hospital identifiers were found
+  in headers, file names or SLCdata fields.
+- Age is given in the article only as a range (29-49 years); all participants were male.

@@ -1,0 +1,39 @@
+Brain Vision Data Exchange Marker File, Version 1.0
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-A_task-powerimagined_run-2_ieeg.eeg
+
+[Marker Infos]
+Mk1=New Segment,,1,1,0
+Mk2=Stimulus,target_3475,7758,9960,0
+Mk3=Stimulus,target_3660,17718,10403,0
+Mk4=Stimulus,target_4500,28121,10360,0
+Mk5=Stimulus,target_3660,38481,10360,0
+Mk6=Stimulus,target_6000,48841,10000,0
+Mk7=Stimulus,target_3660,58841,10000,0
+Mk8=Stimulus,target_5300,68841,10401,0
+Mk9=Stimulus,target_3660,79242,10400,0
+Mk10=Stimulus,target_4500,89642,10360,0
+Mk11=Stimulus,target_3660,100002,10000,0
+Mk12=Stimulus,target_5300,110002,10402,0
+Mk13=Stimulus,target_3660,120404,10360,0
+Mk14=Stimulus,target_6000,130764,10400,0
+Mk15=Stimulus,target_3660,141164,10402,0
+Mk16=Stimulus,target_6000,151566,10360,0
+Mk17=Stimulus,target_3660,161926,10400,0
+Mk18=Stimulus,target_5300,172326,10360,0
+Mk19=Stimulus,target_3660,182686,10402,0
+Mk20=Stimulus,target_4500,193088,10400,0
+Mk21=Stimulus,target_3660,203488,10000,0
+Mk22=Stimulus,target_5300,213488,10360,0
+Mk23=Stimulus,target_3660,223848,10000,0
+Mk24=Stimulus,target_4500,233848,10360,0
+Mk25=Stimulus,target_3660,244208,10402,0
+Mk26=Stimulus,target_6000,254610,10362,0
+Mk27=Stimulus,target_3660,264972,10360,0
+Mk28=Stimulus,target_5300,275332,10400,0
+Mk29=Stimulus,target_3660,285732,10402,0
+Mk30=Stimulus,target_6000,296134,10000,0
+Mk31=Stimulus,target_3660,306134,10000,0
+Mk32=Stimulus,target_4500,316134,398,0

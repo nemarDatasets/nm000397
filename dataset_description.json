@@ -1,0 +1,47 @@
+{
+  "Name": "Executed and imagined grasp forces recorded with stereo-EEG (Murphy et al., 2016): 4 participants, power and pinch force-matching",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "raw",
+  "License": "CC0-1.0",
+  "Authors": [
+    "Brian A. Murphy",
+    "Jonathan P. Miller",
+    "Kabilar Gunalan",
+    "A. Bolu Ajiboye"
+  ],
+  "EthicsApprovals": [
+    "Four human participants (all male, ages 29-49 years) were enrolled into the study after providing written consent. The study was reviewed and approved by the Institutional Review Boards of Louis Stokes Cleveland VA Medical Center (IRB# 11068-H14) and University Hospitals Case Medical Center (IRB# 07-12-33). [Murphy et al. 2016, PLoS One 11:e0150359, Methods > Participants]"
+  ],
+  "Funding": [
+    "United States Department of Veterans Affairs Career Development Award B9043W (A.B.A.)",
+    "National Institute of Biomedical Imaging and Bioengineering T32 training grant 5T32EB004314-14 (B.A.M.)"
+  ],
+  "HowToAcknowledge": "Cite Murphy BA, Miller JP, Gunalan K, Ajiboye AB (2016) Contributions of subsurface cortical modulations to discrimination of executed and imagined grasp forces through stereoelectroencephalography. PLoS One 11(3):e0150359, doi:10.1371/journal.pone.0150359; and the Dryad dataset doi:10.5061/dryad.nq4fs.",
+  "ReferencesAndLinks": [
+    "https://doi.org/10.1371/journal.pone.0150359",
+    "https://doi.org/10.5061/dryad.nq4fs",
+    "https://github.com/mcintyrelab"
+  ],
+  "Keywords": [
+    "stereoelectroencephalography",
+    "SEEG",
+    "grasp force",
+    "motor imagery",
+    "brain-machine interface",
+    "central sulcus",
+    "insular cortex"
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "doi:10.5061/dryad.nq4fs",
+      "URL": "https://datadryad.org/dataset/doi:10.5061/dryad.nq4fs",
+      "Version": "Dryad version 1 (published 2016-04-21)"
+    }
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "b3w3_convert_murphy.py",
+      "Description": "Blackrock NSx (.ns3) int16 samples copied unchanged into BrainVision INT_16 with the NSx header resolution; SLCdata target periods to events.tsv. Code in code/."
+    }
+  ]
+}

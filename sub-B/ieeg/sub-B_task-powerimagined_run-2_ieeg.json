@@ -1,0 +1,28 @@
+{
+  "TaskName": "powerimagined",
+  "TaskDescription": "Force-matching task, power grasp (dynamometer), imagined (no force applied; visual cues still given): targets at three force levels (20, 30 and 40% of maximum voluntary contraction per the article) shown for 5 s with 5 s rest, 5 trials per level per block.",
+  "Instructions": "n/a",
+  "SamplingFrequency": 2000.0,
+  "PowerLineFrequency": 60,
+  "SoftwareFilters": "n/a",
+  "HardwareFilters": {
+    "NSx extended header (amplifier inputs)": {
+      "HighPassCorner_Hz": 0.3,
+      "HighPassOrder": 1,
+      "HighPassType": 1,
+      "LowPassCorner_Hz": 2500.0,
+      "LowPassOrder": 4,
+      "LowPassType": 1
+    }
+  },
+  "iEEGReference": "Hardware reference: a depth electrode contact in a different anatomical region not related to seizure generation (article, Methods)",
+  "Manufacturer": "Blackrock Microsystems",
+  "ManufacturersModelName": "Neuroport",
+  "RecordingDuration": 163.661,
+  "RecordingType": "continuous",
+  "SEEGChannelCount": 128,
+  "ECOGChannelCount": 0,
+  "MiscChannelCount": 1,
+  "iEEGElectrodeInfo": "SEEG depth electrodes (Integra or PMT, per the article); signals split from the clinical Nihon Kohden system",
+  "ElectricalStimulation": false
+}

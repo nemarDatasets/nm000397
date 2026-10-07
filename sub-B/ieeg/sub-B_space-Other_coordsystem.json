@@ -1,0 +1,5 @@
+{
+  "iEEGCoordinateSystem": "Other",
+  "iEEGCoordinateUnits": "n/a",
+  "iEEGCoordinateSystemDescription": "No electrode coordinates, contact names or anatomical labels are released (channels are Neuroport amplifier inputs chan1..chan128); x, y, z = n/a."
+}

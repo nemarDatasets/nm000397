@@ -1,0 +1,19 @@
+{
+  "onset": {
+    "Description": "Start of a force-target period: first SLCdata time step with a nonzero target (receivedTargetinfo column 1), as SLCdata.NSPtime minus the start time of the NSx data packet",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "Until the next SLCdata time step with a different target value",
+    "Units": "s"
+  },
+  "trial_type": {
+    "Description": "'target' = force target shown"
+  },
+  "value": {
+    "Description": "Target value as logged by the Simulink game (SLCdata.receivedTargetinfo column 1; raw dynamometer units, not converted to force). Each block starts with one lower value, then one value (e.g. 3660) alternates with three higher values (the article's 20, 30 and 40% MVC targets); the coding is not documented in the release"
+  },
+  "sample": {
+    "Description": "onset x sampling frequency (0-based)"
+  }
+}

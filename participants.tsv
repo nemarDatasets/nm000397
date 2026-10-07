@@ -1,0 +1,5 @@
+participant_id	source_id	age	sex	handedness	n_amplifier_channels	tasks
+sub-A	Participant A	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined
+sub-B	Participant B	n/a	M	n/a	128	pinchexecuted,pinchimagined,powerexecuted,powerimagined
+sub-C	Participant C	n/a	M	n/a	80	pinchexecuted,powerexecuted
+sub-D	Participant D	n/a	M	n/a	128	pinchexecuted,powerexecuted

@@ -1,0 +1,96 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Brian A. Murphy": {},
+    "Jonathan P. Miller": {},
+    "Kabilar Gunalan": {},
+    "A. Bolu Ajiboye": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.5061/dryad.nq4fs",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1371/journal.pone.0150359",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000397",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000397",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "United States Department of Veterans Affairs",
+      "award_number": "B9043W",
+      "award_title": "Career Development Award"
+    },
+    {
+      "funder_name": "National Institute of Biomedical Imaging and Bioengineering",
+      "award_number": "5T32EB004314-14",
+      "award_title": "T32 training grant"
+    }
+  ],
+  "title": "Executed and imagined grasp forces recorded with stereo-EEG (Murphy et al., 2016): 4 participants, power and pinch force-matching",
+  "license": "CC0-1.0",
+  "dataset_type": "raw",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "7.19 GB (185 files)"
+  ],
+  "formats": [
+    ".eeg",
+    ".json",
+    ".mat",
+    ".ns3",
+    ".py",
+    ".tsv",
+    ".txt",
+    ".vhdr",
+    ".vmrk"
+  ],
+  "description": "Stereo-EEG recordings from four adults with drug-resistant epilepsy performing force-matching tasks with a power grasp and a lateral pinch. Two participants also completed blocks in which they only imagined producing the force. Each block contained trials at three force targets (20, 30 and 40% of maximum voluntary contraction). The data comprise 46 blocks (about 2.11 h) sampled at 2000 Hz, with an analog dynamometer channel and force-target events. They support study of how subsurface cortical modulations discriminate executed and imagined grasp forces.",
+  "methods_description": "Neuroport amplifier recordings at 2000 Hz with an analog dynamometer force channel. Participants matched force targets shown for 5 s, alternating with 5 s rest, in blocks of 5 trials per target. Blackrock NSx int16 samples were converted unchanged to BrainVision format, and target periods from the Simulink log were written to events.tsv. Dates were partially de-identified.",
+  "keywords": [
+    {
+      "term": "stereoelectroencephalography"
+    },
+    {
+      "term": "SEEG"
+    },
+    {
+      "term": "grasp force"
+    },
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "brain-machine interface"
+    },
+    {
+      "term": "Epilepsy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004827"
+    },
+    {
+      "term": "Hand Strength",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D018737"
+    }
+  ],
+  "source_hash": "2b7c27a785de7472ae7abae5fa30eb4165810033069516008f26f71518c0c2b7"
+}

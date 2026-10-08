@@ -43,5 +43,7 @@
       "Name": "b3w3_convert_murphy.py",
       "Description": "Blackrock NSx (.ns3) int16 samples copied unchanged into BrainVision INT_16 with the NSx header resolution; SLCdata target periods to events.tsv. Code in code/."
     }
-  ]
+  ],
+  "DatasetDOI": "10.82901/nemar.nm000397",
+  "Version": "1.0.0"
 }

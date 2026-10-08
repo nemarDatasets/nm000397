@@ -1,0 +1,98 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000397-blue)](https://doi.org/10.82901/nemar.nm000397)
+
+# Executed and imagined grasp forces recorded with stereo-EEG (Murphy et al., 2016)
+
+Stereo-EEG from four adults with drug-resistant epilepsy (University Hospitals Case Medical Center, Cleveland, OH) who
+performed force-matching tasks with a power grasp (dynamometer) and a lateral pinch (pinch gauge). Participants A and B
+also performed blocks in which they only imagined producing the force. Each block: 5 trials at each of 3 force targets
+(20, 30, 40% of maximum voluntary contraction), target shown 5 s with 5 s rest (article).
+
+## Source
+- Dryad: Murphy BA, Miller JP, Gunalan K, Ajiboye AB. Data from: Contributions of subsurface cortical modulations to
+  discrimination of executed and imagined grasp forces through stereoelectroencephalography. doi:10.5061/dryad.nq4fs
+  (version 1, 2016-04-21). License: CC0 1.0 (Dryad).
+- Article: PLoS One 11(3):e0150359 (2016), doi:10.1371/journal.pone.0150359 (open access, PMC4786254).
+- All 14 Dryad files were downloaded through the Dryad API and matched the Dryad md5 digests and sizes.
+
+## Contents
+- `sub-<A-D>/ieeg/*_task-<power|pinch><executed|imagined>_run-<block>_ieeg.*`: 46 blocks, 2.11 h in total, 2000 Hz.
+  Channels `chan1`..`chan128` (participant C: `chan49`..`chan128`) are the Neuroport amplifier inputs, typed SEEG;
+  the release does not say which inputs carried connected contacts, and gives no contact names, locations or
+  anatomical labels (the article localised contacts with CT/MRI; those data are not released). `dynamometer` is the
+  analog force signal (MISC, mV).
+- `*_events.tsv`: force-target periods from the Simulink log (SLCdata). Target values are the game's raw dynamometer
+  units. Timing = SLCdata.NSPtime minus the NSx packet start; checked by correlating the SLCdata dynamometer log with
+  the NSx dynamometer channel at those times: executed blocks r = 0.44-0.93 (median
+  0.83); imagined blocks r = -0.40-0.25 (no force produced, as expected).
+  Logged target values: each block starts with one period at a lower value (e.g. 3475), then a value of 3660
+  alternates with the force targets (e.g. 4500, 5300, 6000); 3660 is most likely the rest/baseline target, but the
+  release does not document the coding, so values are given as logged.
+- `sourcedata/dryad-nq4fs-deidentified/`: every file of the 7 zips (NSx .ns3 and SLCData .mat) and the README files,
+  de-identified as described below. `DEIDENTIFICATION_MANIFEST.tsv` lists original and new sha-256 per file.
+
+## Conversion
+- The int16 samples of each NSx file are written unchanged as BrainVision INT_16 (multiplexed); per-channel resolution
+  from the NSx extended header ((max analog - min analog)/(max digital - min digital): 0.25 µV/bit for the amplifier
+  inputs, 0.1526 mV/bit for the dynamometer). No filtering, resampling, re-referencing or channel removal. Read-back
+  with MNE matches the source values. NSx data packets per file: [1]; packet gaps: 0.
+- Hardware filter settings are copied from the NSx extended header into `HardwareFilters`.
+- Hardware reference: a depth contact in a region not related to seizure generation (article). The article's common
+  average re-referencing was an analysis step and is not applied here.
+
+## Privacy
+- NSx headers store the recording date and time. In the BIDS `scans.tsv` and in the sourcedata copies the day is set
+  to 01 (year, month and time of day kept); the NSx weekday field is recomputed for the 1st. MAT-file text headers
+  ('Created on ...') of the SLCData files are reduced to month and year. No names or hospital identifiers were found
+  in headers, file names or SLCdata fields.
+- Age is given in the article only as a range (29-49 years); all participants were male.
+
+## Additional metadata and localisation (added 2026-10-08)
+
+Compiled after the upload from the article, its supplement and the source deposit (each statement names its source). Text and sidecar metadata only; no data file was changed.
+
+Sources: P = Murphy, Miller, Gunalan, Ajiboye 2016, PLoS ONE 11(3):e0150359, doi:10.1371/journal.pone.0150359 (PMC4786254), with S1 Text (supplemental methods), S2 Text and S1 Fig. R = deposit READMEs (README_for_Participant*.txt, identical). F = deposit files (.ns3 headers, probe on Voyager).
+
+**Reference.** Hardware reference was a depth-electrode contact in another anatomical region not involved in seizure generation. For analysis, signals were common-average referenced within groups of contacts on the same electrode passing through similar tissue, excluding noisy channels (P). The SLCdata CARchans field lists 1..128 (F).
+
+**Electrodes.** Integra electrodes have 12 Pt-Ir contacts (1.1 mm diameter, 2.3 mm long, 5 mm spacing). One participant had two PMT combination electrodes with 4 macro contacts (1.4 mm, 7 mm centre spacing) and 4x6 microwires. Only electrodes passing through sensorimotor areas were used in the study (P).
+
+**Localisation.** The post-operative CT (Philips Brilliance iCT or Siemens SOMATOM Sensation 16/Cardiac 64) was rigidly coregistered to the pre-operative 3T T1 (Siemens MAGNETOM Verio) with FSL FLIRT (mutual information, 6 DOF) (S1 Text). Each contact was shown as a sphere and coloured by the nearest structure from a FreeSurfer parcellation (motor, premotor, primary sensory, insula); SMA was drawn by hand in FSLView. Code: https://github.com/mcintyrelab (P). Per participant (P Results/Discussion): every participant had an electrode through the arm/hand area of motor cortex. A, B and C had motor electrodes near the central sulcus; D had two electrodes on the precentral gyrus (arm/hand and leg areas) and one through the SMA. A, B and C had contacts in anterior and posterior insula, D had none. C and D had contacts in primary sensory cortex; the contacts of A and B were too deep to record from sensory cortex. S1 Fig colour-codes every contact of every analysed electrode by region (counted in the table below). The mapping from deposit channel numbers (chanN) to these contacts and the coordinates are not published.
+
+### Regions per participant (as published; no coordinates exist)
+
+| participant | region (as stated) | hemisphere | contacts | source |
+|---|---|---|---|---|
+| ParticipantA | AI (anterior insula electrode): premotor cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | AI (anterior insula electrode): insular cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | AI (anterior insula electrode): uncoloured: not grey matter (white matter or outside brain) | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): motor cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): insular cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | MI (middle insula electrode): uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | PI (posterior insula electrode): insular cortex | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantA | PI (posterior insula electrode): uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: premotor cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: insular cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | AI: uncoloured | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: motor cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: insular cortex | n/a | 2 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | MI: uncoloured | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | PI: insular cortex | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantB | PI: uncoloured | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: premotor cortex | n/a | 2 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: insular cortex | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | AI: uncoloured | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PS (precentral-sulcus side of primary motor): motor cortex | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | CS (central-sulcus side of primary motor): motor cortex | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: primary sensory cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: insular cortex | n/a | 1 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantC | PI: uncoloured | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SMA: supplementary motor area | n/a | 3 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SMA: uncoloured | n/a | 9 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | ML (primary motor, leg area): motor cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | ML (primary motor, leg area): uncoloured | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | MA/H (primary motor, arm/hand area): motor cortex | n/a | 5 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | MA/H (primary motor, arm/hand area): uncoloured | n/a | 7 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SL (sensory cortex, leg area): primary sensory cortex | n/a | 4 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SL (sensory cortex, leg area): uncoloured | n/a | 8 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SA/H (sensory cortex, arm/hand area): primary sensory cortex | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |
+| ParticipantD | SA/H (sensory cortex, arm/hand area): uncoloured | n/a | 6 | doi:10.1371/journal.pone.0150359, S1 Fig (pone.0150359.s003), visual count of colour-coded contact squares |

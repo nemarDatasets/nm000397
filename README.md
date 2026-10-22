@@ -20,6 +20,8 @@ also performed blocks in which they only imagined producing the force. Each bloc
   the release does not say which inputs carried connected contacts, and gives no contact names, locations or
   anatomical labels (the article localised contacts with CT/MRI; those data are not released). `dynamometer` is the
   analog force signal (MISC, mV).
+- Amplifier inputs with more than 1% of samples at the ±8191 µV rail (digital ±32764) are marked `bad` in
+  `channels.tsv`, with the fraction in `status_description` (394 channels in 24 recordings of A, B and C; up to 48.2%).
 - `*_events.tsv`: force-target periods from the Simulink log (SLCdata). Target values are the game's raw dynamometer
   units. Timing = SLCdata.NSPtime minus the NSx packet start; checked by correlating the SLCdata dynamometer log with
   the NSx dynamometer channel at those times: executed blocks r = 0.44-0.93 (median

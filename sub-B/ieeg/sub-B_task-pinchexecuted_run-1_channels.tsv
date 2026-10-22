@@ -45,8 +45,8 @@ chan43	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 43; amplifier in
 chan44	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 44; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan45	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 45; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan46	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 46; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan47	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 47; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan48	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 48; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan47	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 39.4% of samples	NSx electrode ID 47; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan48	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 41.0% of samples	NSx electrode ID 48; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan49	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 49; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan50	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 50; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan51	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 51; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
@@ -55,14 +55,14 @@ chan53	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 53; amplifier in
 chan54	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 54; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan55	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 55; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan56	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 56; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan57	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 57; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan58	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 58; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan59	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 59; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan60	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 60; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan61	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 61; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan62	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 62; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan63	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 63; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
-chan64	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 64; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan57	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 43.3% of samples	NSx electrode ID 57; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan58	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 43.4% of samples	NSx electrode ID 58; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan59	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 42.9% of samples	NSx electrode ID 59; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan60	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 42.3% of samples	NSx electrode ID 60; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan61	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 43.0% of samples	NSx electrode ID 61; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan62	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 42.9% of samples	NSx electrode ID 62; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan63	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 43.5% of samples	NSx electrode ID 63; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
+chan64	SEEG	µV	0.3	2500.0	2000.0	n/a	bad	at the ±8191 µV rail for 42.9% of samples	NSx electrode ID 64; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan65	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 65; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan66	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 66; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
 chan67	SEEG	µV	0.3	2500.0	2000.0	n/a	good	n/a	NSx electrode ID 67; amplifier input; contact identity/location not released; resolution 0.25 µV/bit
